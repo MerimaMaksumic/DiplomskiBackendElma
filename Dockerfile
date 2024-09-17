@@ -3,7 +3,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/DigitalMarketplaceApplication-0.0.1-SNAPSHOT.jar DigitalMarketplaceApplication.jar
+COPY --from=build /target/zipBackentaDigitalMarketplace-0.0.1-SNAPSHOT.jar zipBackentaDigitalMarketplace.jar
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","DigitalMarketplaceApplication.jar"]
+ENTRYPOINT ["java","-jar","zipBackentaDigitalMarketplace.jar"]
